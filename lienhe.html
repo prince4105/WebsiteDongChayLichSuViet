@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liên hệ — Dòng Chảy Lịch Sử Việt</title>
+  <meta name="description" content="Liên hệ, góp ý, gửi tư liệu — Dòng Chảy Lịch Sử Việt." />
+  
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Praise&display=swap" rel="stylesheet">
+  
+  <style>
+      :root {
+      /* === Bảng màu Light Mode === */
+      --bg-light: #fdfbf6; /* Be kem */
+      --card-light: #ffffff;
+      --primary-light: #a12126; /* Đỏ đô đậm */
+      --accent-light: #b48c47; /* Vàng đồng */
+      --text-light: #3a2e27; /* Nâu đậm */
+      --muted-light: #7a6a5f; /* Nâu xám nhạt */
+      --border-light: #e5e0db; /* Xám be */
+      --shadow-light: 0 12px 35px rgba(90, 70, 58, 0.1); /* Shadow đậm hơn */
+      --glass-light: rgba(253, 251, 246, 0.85); /* Nền kính sáng */
+      --input-bg-light: #f8f5f2;
+      /* Họa tiết vân mây nhẹ */
+      --pattern-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e5e0db' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 6v4h4V6H6zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zM6 16v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 26v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 36v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 46v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 56v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 66v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 76v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 86v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+      /* === Bảng màu Dark Mode === */
+      --bg-dark: #000000; /* Đen tuyền */
+      --card-dark: #1a1816; /* Xám đen đậm hơn */
+      --primary-dark: var(--accent-light); /* Vàng đồng */
+      --accent-dark: #cea86a; /* Vàng đồng sáng hơn */
+      --text-dark: #e0daca; /* Be sáng */
+      --muted-dark: #9c938a; /* Xám be nhạt */
+      --border-dark: #3a3631; /* Nâu xám đậm hơn */
+      --shadow-dark: 0 16px 50px rgba(0, 0, 0, 0.5); /* Shadow mạnh hơn */
+      --glass-dark: rgba(26, 24, 22, 0.85); /* Nền kính tối */
+      --input-bg-dark: #2f2c29;
+      --pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233a3631' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 6v4h4V6H6zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zm10 0v4h4V6h-4zM6 16v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 26v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 36v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 46v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 56v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 66v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 76v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zM6 86v4h4v-4H6zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4zm10 0v4h4v-4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+      /* === Thiết lập ban đầu (Light) === */
+      --bg: var(--bg-light); --card: var(--card-light); --primary: var(--primary-light); --accent: var(--accent-light);
+      --text: var(--text-light); --muted: var(--muted-light); --border: var(--border-light); --shadow: var(--shadow-light);
+      --glass-bg: var(--glass-light); --input-bg: var(--input-bg-light); --pattern: var(--pattern-light);
+
+      --radius: 12px; --radius-sm: 8px; --maxw: 1280px; --header-height: 72px;
+
+      /* Font Families */
+      --font-body: 'Inter', system-ui, Arial, sans-serif;
+      --font-heading: 'EB Garamond', serif;
+      --font-display: 'Praise', cursive; /* Font thư pháp ấn tượng */
+    }
+    [data-theme="dark"]{
+      --bg: var(--bg-dark); --card: var(--card-dark); --primary: var(--primary-dark); --accent: var(--accent-dark);
+      --text: var(--text-dark); --muted: var(--muted-dark); --border: var(--border-dark); --shadow: var(--shadow-dark);
+      --glass-bg: var(--glass-dark); --input-bg: var(--input-bg-dark); --pattern: var(--pattern-dark);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html{scroll-behavior:smooth}
+    body{
+        margin:0; padding: 0; font-family: var(--font-body); background-color: var(--bg);
+        background-image: var(--pattern); color: var(--text); transition: background 0.3s, color 0.3s;
+        padding-top: var(--header-height); font-size: 16px; line-height: 1.7; /* Tăng line-height hơn nữa */
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    a{color:var(--primary);text-decoration:none; transition: color 0.2s ease-out, opacity 0.2s ease-out;}
+    a:hover { color: var(--accent); opacity: 0.85; text-decoration: none;} /* Bỏ gạch chân mặc định */
+    img { max-width: 100%; height: auto; display: block; border-radius: var(--radius-sm); }
+
+    .wrap{max-width:var(--maxw); margin:0 auto; padding: 0 40px;} /* Tăng padding wrap */
+
+    /* === Header Cố Định Dạng Kính === */
+    .sticky-header {
+        position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+        background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); /* Blur mạnh hơn */
+        border-bottom: 1px solid var(--border); transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+        height: var(--header-height); display: flex; align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Thêm shadow nhẹ */
+    }
+     [data-theme="dark"] .sticky-header { box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+    .header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .header-brand { display: flex; align-items: center; gap: 14px; color: var(--primary); transition: transform 0.2s ease-out;}
+    .header-brand:hover { transform: scale(2.03); } /* Hiệu ứng hover logo */
+    .main-navigation ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+    .main-navigation a {
+        display: block; padding: 10px 18px; font-weight: 500; color: var(--text); border-radius: 8px;
+        transition: background 0.2s, color 0.2s, transform 0.2s; font-size: 1rem; position: relative;
+    }
+    .main-navigation a:hover { background: var(--glass); color: var(--primary); transform: translateY(-2px); }
+    .main-navigation a.active-page { color: var(--primary); font-weight: 600; background: transparent; }
+    .main-navigation a.active-page::after {
+        content: ''; position: absolute; bottom: 5px; left: 18px; right: 18px; height: 3px;
+        background: var(--primary); border-radius: 1.5px;
+        animation: slideIn 0.3s ease-out; /* Hiệu ứng gạch chân */
+    }
+    @keyframes slideIn { from { width: 0; left: 50%; } to { width: calc(100% - 36px); left: 18px; } }
+    [data-theme="dark"] .main-navigation a.active-page { color: var(--primary); }
+    [data-theme="dark"] .main-navigation a.active-page::after { background: var(--primary); }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .icon-btn{
+        background: transparent; border: 1px solid var(--border); padding: 12px; /* Lớn hơn */
+        border-radius: 10px; color: var(--muted); cursor: pointer;
+        transition: all 0.2s ease-out; line-height: 1; display: flex;
+        align-items: center; justify-content: center; position: relative;
+    }
+    .icon-btn:hover { background: var(--glass); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
+    .icon-btn svg { width: 18px; height: 18px; } /* Kích thước icon chuẩn */
+
+    #theme-toggle .theme-icon-dark, #theme-toggle .theme-icon-light { transition: opacity 0.3s; }
+
+    /* Nội dung chính */
+    .content-area { padding: 64px 0; } /* Tăng padding */
+
+    /* Page Header */
+    .page-header {
+        margin-bottom: 48px; text-align: center; position: relative; padding: 20px 0;
+    }
+     .page-header::before, .page-header::after { /* Đường kẻ trang trí */
+        content: ''; position: absolute; left: 50%; width: 100px; height: 1px;
+        background: linear-gradient(to right, transparent, var(--accent), transparent);
+        transform: translateX(-50%);
+    }
+    .page-header::before { top: 0; }
+    .page-header::after { bottom: 0; }
+
+    h1.page-title{
+        margin:0 0 16px 0; color:var(--text); font-family: var(--font-display); /* Font thư pháp */
+        font-size: 5rem; /* Rất lớn */ font-weight: 400; /* Thường font thư pháp chỉ có weight 400 */
+        line-height: 1.1; letter-spacing: 1px; color: var(--primary);
+    }
+    .page-subtitle{color:var(--muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.8; font-family: var(--font-heading); font-style: italic;}
+
+
+    /* Main Card */
+    main.card{
+        background:var(--card); padding: 48px; border-radius:var(--radius);
+        box-shadow:var(--shadow); border: 1px solid var(--border);
+        transition: background 0.3s, border 0.3s;
+        background-image: var(--pattern); background-size: 80px 80px; /* Họa tiết lớn hơn */
+        background-blend-mode: multiply; /* Hòa trộn họa tiết */
+        position: relative; /* Cho họa tiết trang trí góc */
+    }
+    
+
+    /* Layout Grid */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start}
+    
+    /* Form Styles */
+    h2 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--text); margin: 0 0 12px 0; }
+    p.page-desc { font-size: 1.1rem; color: var(--muted); font-family: var(--font-heading); font-style: italic; margin-bottom: 24px; }
+    
+    label { display: block; font-weight: 600; margin-bottom: 8px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text); }
+    input[type="text"], input[type="email"], textarea, select{
+      width:100%; padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+      background: var(--input-bg); color:inherit; font-size: 1rem;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.06); transition: border 0.2s, box-shadow 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+        outline: none; border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1), inset 0 1px 3px rgba(0,0,0,0.06);
+    }
+    textarea{min-height:160px;resize:vertical; line-height: 1.7;}
+    select { 
+        appearance: none; 
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%237a6a5f' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); 
+        background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; 
+    }
+    [data-theme="dark"] select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239c938a' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); }
+    
+    .row{margin-bottom:20px}
+    .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap; margin-top: 16px;}
+    
+    .btn{
+        background: var(--primary); color: #fff; padding: 12px 24px; border-radius: 8px; border:0;
+        font-weight: 600; cursor:pointer; transition: all 0.25s ease-out;
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem;
+        box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.2); text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .btn:hover { transform: translateY(-3px); filter: brightness(1.1); box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.3); }
+    [data-theme="dark"] .btn { color: var(--bg-dark); box-shadow: 0 6px 18px rgba(var(--primary-rgb), 0.25); }
+    [data-theme="dark"] .btn:hover { box-shadow: 0 8px 28px rgba(var(--primary-rgb), 0.35); }
+
+    .info-box{background:var(--glass); padding: 28px; border-radius:var(--radius); border: 1px solid var(--border);}
+    .small-muted{font-size:0.9rem;color:var(--muted); line-height: 1.6;}
+    .divider{height:1px;background:var(--border);margin:24px 0}
+    
+    .preview{white-space:pre-wrap; background: var(--input-bg); padding: 16px; border-radius:var(--radius-sm); border:1px solid var(--border); color:var(--muted); font-size: 0.9rem; line-height: 1.6; max-height: 200px; overflow-y: auto;}
+    .iframe-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border); min-height: 400px; margin-top: 16px;}
+
+    /* responsive */
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} .iframe-wrap{height:400px} }
+    @media (max-width: 1024px) { .main-navigation { display: none; } #mobile-menu-toggle { display: flex !important; } }
+    @media (max-width: 768px) { body { padding-top: 68px; --header-height: 68px; } .wrap { padding: 0 24px;} h1.page-title { font-size: 5rem; } main.card { padding: 32px; } .grid { gap: 32px;} }
+    @media (max-width: 480px) { body { padding-top: 60px; --header-height: 60px; } .wrap { padding: 0 16px;} h1.page-title { font-size: 3.5rem; } main.card { padding: 24px 16px; } input, textarea, select { padding: 14px 16px;} .btn { padding: 12px 20px; font-size: 0.9rem;} }
+
+    /* Focus styles */
+    *:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 6px; box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.3); }
+    *:focus:not(:focus-visible) { outline: none; }
+
+    /* Helper class */
+    .hidden { display: none !important; }
+
+    /* Mobile Nav Overlay */
+    .mobile-nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(var(--bg-rgb), 0.97); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 1001; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px; animation: fadeIn 0.3s ease-out; }
+    .mobile-nav-overlay nav { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .mobile-nav-overlay a { font-size: 1.8rem; font-weight: 600; color: var(--text); padding: 10px 20px; border-radius: 8px; font-family: var(--font-heading); }
+    .mobile-nav-overlay a.active-page { color: var(--primary); }
+    .mobile-nav-close { position: absolute; top: 20px; right: 20px; font-size: 2.5rem; background: none; border: none; color: var(--text); cursor: pointer; padding: 10px;}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Tùy chỉnh CSS cho logo dạng hình ảnh */
+
+/* 1. Thiết lập lại khối bao bọc */
+.header-brand.logo-image-mode {
+    display: flex; /* Đảm bảo cả ảnh và text nằm trên một hàng */
+    align-items: center;
+    gap: 14px; /* Khoảng cách giữa logo và text "Dòng Chảy" */
+}
+
+/* 2. ĐỊNH DẠNG LẠI ẢNH LOGO (QUAN TRỌNG) */
+.header-logo-image {
+    /* Đặt chiều cao nhỏ hơn một chút so với header height (72px) */
+    height: 50px; 
+    width: auto; /* Chiều rộng tự động co giãn để giữ tỉ lệ */
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease-out;
+    /* Loại bỏ margin-right cũ nếu đã đặt */
+}
+
+/* Vô hiệu hóa style của icon chữ cũ (DCL) */
+.header-brand.logo-image-mode .header-logo-icon {
+    display: none !important;
+}
+
+/* Chỉnh lại hiệu ứng hover cho brand khi là ảnh */
+.header-brand.logo-image-mode:hover .header-logo-image {
+    transform: scale(1.05); /* Ảnh hơi to ra khi hover */
+}
+.header-brand.logo-image-mode:hover {
+     /* Bỏ hiệu ứng xoay (rotate) ban đầu để phù hợp với logo ảnh */
+     transform: scale(2.03); 
+}
+
+/* 3. ĐIỀU CHỈNH RESPONSIVE cho logo ảnh */
+@media (max-width: 768px) {
+    .header-logo-image {
+        height: 40px; /* Giảm chiều cao ảnh trên tablet/mobile (header height 64px) */
+    }
+    .header-brand.logo-image-mode {
+         gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .header-logo-image {
+        height: 32px; /* Giảm chiều cao ảnh trên mobile nhỏ (header height 60px) */
+    }
+}
+/* === START: CSS Footer === */
+    footer {
+        margin-top: 64px;
+        padding: 48px 0;
+        background: var(--input-bg); /* Nền nhẹ cho footer */
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 32px;
+        max-width: var(--maxw); /* Sử dụng biến --maxw đã định nghĩa */
+        margin: 0 auto;
+        padding: 0 40px; /* Padding ngang khớp với .wrap */
+        text-align: left;
+    }
+    .footer-column {
+        flex: 1;
+        min-width: 200px; /* Đảm bảo các cột không quá hẹp */
+    }
+    .footer-column h4 {
+        font-family: var(--font-heading); /* Sử dụng font heading đã định nghĩa */
+        font-size: 1.5rem;
+        color: var(--text);
+        margin: 0 0 16px 0;
+        font-weight: 600;
+    }
+    .footer-column p, .footer-column a {
+        color: var(--muted);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        line-height: 1.6; /* Thêm line-height cho dễ đọc */
+    }
+    .footer-column a:hover {
+        color: var(--primary); /* Sử dụng màu primary đã định nghĩa */
+    }
+    .footer-copyright {
+        text-align: center;
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px dashed var(--border);
+        font-size: 0.9rem;
+    }
+     /* Responsive cho footer */
+    @media (max-width: 1024px) {
+        .footer-content { padding: 0 24px; } /* Khớp padding wrap ở tablet */
+    }
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column; /* Xếp chồng cột trên mobile */
+            padding: 0 16px; /* Khớp padding wrap ở mobile nhỏ */
+        }
+    }
+    @media (max-width: 480px) {
+        .footer-content { padding: 0 12px; } /* Khớp padding wrap ở mobile rất nhỏ */
+    }
+    /* === END: CSS Footer === */
+    /* === CSS Nút Chọn Ngôn Ngữ === */
+.language-switcher {
+    display: inline-flex; /* Dùng flex để căn chỉnh tốt hơn */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-left: 16px; /* Khoảng cách với phần tử trước đó */
+    font-size: 0.85rem; /* Cỡ chữ nhỏ hơn một chút */
+    color: var(--muted);
+    border: 1px solid var(--border); /* Thêm viền nhẹ */
+    border-radius: 99px; /* Bo tròn */
+    padding: 2px; /* Khoảng đệm nhỏ bên trong */
+    background-color: var(--input-bg); /* Nền nhẹ */
+}
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 4px 10px; /* Padding nút */
+    cursor: pointer;
+    font-weight: 500; /* Bỏ đậm mặc định */
+    color: var(--muted);
+    transition: all 0.2s ease-in-out;
+    border-radius: 99px; /* Bo tròn nút */
+    line-height: 1; /* Đảm bảo chiều cao nhất quán */
+}
+.lang-btn:hover {
+    color: var(--primary);
+    background-color: var(--glass-bg); /* Hiệu ứng kính khi hover */
+}
+.lang-btn.active {
+    color: #fff; /* Chữ trắng khi active */
+    font-weight: 600; /* Đậm hơn khi active */
+    background-color: var(--primary); /* Nền màu chính khi active */
+    box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.3); /* Đổ bóng nhẹ */
+}
+/* Thêm màu cho dấu | */
+.language-switcher span {
+    padding: 0 2px;
+    color: var(--border);
+}
+/* === END CSS Nút Chọn Ngôn Ngữ === */
+  </style>
+</head>
+<body>
+  <div class="main-layout">
+    <header class="sticky-header">
+         <a href="trangchu.html" class="header-brand logo-image-mode" title="Dòng Chảy Lịch Sử Việt - Trang Chủ">
+  <img src="images/dclsv.png" alt="Logo website" width="196" style="padding-top: 25px;"> </a>
+            <nav class="main-navigation" aria-label="Điều hướng chính">
+                 <ul>
+                    <li><a href="trangchu.html">Trang Chủ</a></li>
+                    <li><a href="lichsu.html">Lịch Sử</a></li>
+                    <li><a href="dungnuocvagiunuoc.html" >Dựng Nước & Giữ Nước</a></li>
+                    <li><a href="vanhoa.html" >Văn Hóa</a></li>
+                    <li><a href="khotulieu.html">Tư Liệu</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
+                    <li><a href="lienhe.html"class="active-page">Liên Hệ & Góp ý</a></li>
+                 </ul>
+            </nav>
+            <div class="header-actions">
+                 <div class="language-switcher">
+    <button id="lang-vi" class="lang-btn" data-lang="vi" data-translate-key="langVIE">VIE</button> |
+    <button id="lang-en" class="lang-btn" data-lang="en" data-translate-key="langENG">ENG</button>
+</div>
+                 <button id="theme-toggle" class="icon-btn" title="Chuyển giao diện Sáng/Tối" aria-live="polite">
+                 
+                     <span class="theme-icon-light" aria-label="Chế độ sáng">☀️</span>
+                     <span class="theme-icon-dark hidden" aria-label="Chế độ tối">🌙</span>
+                 </button>
+                  
+            </div>
+        
+    </header>
+   </div>
+  <div class="content-area">
+    <div class="wrap">
+      <div class="page-header">
+          <h1 class="page-title" id="site-title">Liên hệ</h1>
+          <p class="page-subtitle" id="site-sub">Góp ý, gửi tư liệu hoặc báo lỗi nội dung</p>
+      </div>
+
+      <main class="card" role="main">
+        <div class="grid">
+          <div>
+            <h2 id="form-title" class="section-title" style="font-size: 2.2rem; border: none; padding-bottom: 0;">Gửi góp ý / liên hệ</h2>
+            <p id="form-desc" class="page-desc">Bạn có thể gửi góp ý, tài liệu hoặc báo lỗi nội dung. Vì site tĩnh, chúng tôi hỗ trợ gửi qua mail client (mailto) hoặc Google Form (nhúng).</p>
+
+            <form id="contact-form" aria-label="Form liên hệ" style="margin-top: 24px;">
+              <div class="row">
+                <label for="name" id="label-name">Họ và tên <span aria-hidden="true" style="color:var(--primary)">*</span></label>
+                <input id="name" name="name" type="text" required placeholder="Nguyễn Văn A" />
+              </div>
+
+              <div class="row">
+                <label for="email" id="label-email">Email <span aria-hidden="true" style="color:var(--primary)">*</span></label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+
+              <div class="row">
+                <label for="method" id="label-method">Gửi bằng</label>
+                <select id="method" name="method" aria-label="Chọn phương thức gửi">
+                  <option value="mailto">Mở mail client (mailto)</option>
+                  <option value="google">Google Form (nhúng hoặc mở link)</option>
+                </select>
+              </div>
+
+              <div class="row" id="google-url-row" style="display:none">
+                <label for="google-url" id="label-google">URL Google Form (tùy chọn)</label>
+                <input id="google-url" placeholder="Dán link Google Form (https://docs.google.com/forms/...)">
+                <div class="small-muted" style="margin-top:8px">Nếu bạn cung cấp Google Form, lựa chọn 'Google Form' sẽ nhúng form. Nếu để trống, nút gửi sẽ mở link Google Form trong tab mới.</div>
+              </div>
+
+              <div class="row">
+                <label for="subject" id="label-subject">Chủ đề</label>
+                <input id="subject" name="subject" type="text" placeholder="Ví dụ: Góp ý nội dung, Gửi ảnh tư liệu..." />
+              </div>
+
+              <div class="row">
+                <label for="message" id="label-message">Nội dung <span aria-hidden="true" style="color:var(--primary)">*</span></label>
+                <textarea id="message" name="message" required placeholder="Nội dung góp ý hoặc thông tin muốn gửi..."></textarea>
+              </div>
+
+              <div class="row">
+                <label for="attach" id="label-attach">URL tài liệu (tùy chọn)</label>
+                <input id="attach" placeholder="Link đến ảnh, PDF, Google Drive..." />
+                <div class="small-muted" style="margin-top: 8px;">Bạn có thể dán link (nếu lớn/đa phương tiện) — mail client/Google Form sẽ chứa link này.</div>
+              </div>
+
+              <div class="row">
+                <div class="actions">
+                  <button type="submit" class="btn" id="btn-send">Gửi</button>
+                  <button type="button" id="save-draft" class="icon-btn" title="Lưu nháp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                  </button>
+                  <button type="button" id="clear-form" class="icon-btn" title="Xóa nội dung form">✕</button>
+                  <button type="button" id="preview-mail" class="icon-btn" title="Xem trước nội dung email">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                  <button type="button" id="copy-mailto" class="icon-btn" title="Sao chép link mailto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <h4 id="preview-title" style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 12px; color: var(--text);">Xem trước nội dung email (mailto)</h4>
+              <div class="preview" id="mailto-preview">Nội dung email sẽ hiển thị ở đây khi bạn nhập.</div>
+            </form>
+          </div>
+
+          <aside class="aside" aria-label="Thông tin bổ sung">
+            <div class="aside-box info-box">
+             <h3 id="info-title" style="margin-top: 0; text-align: center;">
+  Thông tin liên hệ
+</h3>
+
+              <div style="text-align: center; margin-bottom: 16px;">
+  <img 
+    src="images/lienhe.JPG" 
+    alt="Ảnh đại diện"
+    style="
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      display: inline-block;
+    "
+  >
+</div>
+              <p class="small-muted" style="font-size: 1rem; line-height: 1.8;"><strong>Email:</strong> <a id="contact-email" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">builehau2005@gmail.com</a></p>
+              <p class="small-muted" style="font-size: 1rem; line-height: 1.8;"><strong>Phone:</strong> +84 0961816805</p>
+                <p class="small-muted" style="font-size: 1rem; line-height: 1.8;"><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+              <p class="small-muted" style="font-size: 1rem; line-height: 1.8;"><strong>Facebook:</strong> <a href="https://web.facebook.com/uahhna410/?locale=vi_VN" target="_blank" rel="noopener">Hậu Bùi</a></p>
+
+              <div class="divider"></div>
+
+              <h4 id="embed-title">Nhúng Google Form</h4>
+              <p class="small-muted" style="font-size: 1rem; line-height: 1.8;">Dán URL Google Form ở khung bên trái để nhúng form. Nếu link hợp lệ, form sẽ xuất hiện bên dưới.</p>
+
+              <div id="embedded-form-area" style="margin-top:16px">
+                  {link sẽ được cập nật trong thời gian sớm nhất! Trân trọng.}
+              </div>
+
+              <div class="divider"></div>
+
+              <h4 id="notes-title">Ghi chú</h4>
+              <p class="muted" style="font-size: 0.95rem; line-height: 1.7;">● Trang web này là dự án tĩnh (static site) phi lợi nhuận, chúng tôi sử dụng `mailto:` hoặc Google Form để nhận phản hồi.<br>● Nếu cần gửi file lớn, vui lòng tải lên Google Drive / OneDrive và dán link vào ô URL tài liệu.</p>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+       <footer style="margin-top: 64px; color: var(--muted); font-size: 0.95rem; text-align: center; padding: 32px 0; border-top: 1px dashed var(--border);">
+            © Dòng Chảy Lịch Sử Việt. Nội dung tổng hợp cho mục đích tham khảo.
+       </footer>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // --- DOM Elements ---
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeIconLight = themeToggleBtn?.querySelector('.theme-icon-light');
+      const themeIconDark = themeToggleBtn?.querySelector('.theme-icon-dark');
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+      const mobileNavClose = document.getElementById('mobile-nav-close');
+      
+      const langSelect = document.getElementById('lang-select');
+      
+      const method = document.getElementById('method');
+      const googleRow = document.getElementById('google-url-row');
+      const googleUrl = document.getElementById('google-url');
+      const form = document.getElementById('contact-form');
+      const nameEl = document.getElementById('name');
+      const emailEl = document.getElementById('email');
+      const subjectEl = document.getElementById('subject');
+      const messageEl = document.getElementById('message');
+      const attachEl = document.getElementById('attach');
+      const previewEl = document.getElementById('mailto-preview');
+      const saveDraftBtn = document.getElementById('save-draft');
+      const clearBtn = document.getElementById('clear-form');
+      const previewMailBtn = document.getElementById('preview-mail');
+      const copyMailBtn = document.getElementById('copy-mailto');
+      const embeddedArea = document.getElementById('embedded-form-area');
+      
+      const DRAFT_KEY = 'dcl_contact_draft_v2';
+      
+      /* ---------------------------
+         i18n: Vietnamese / English
+         --------------------------- */
+      const i18n = {
+        vi: {
+          site_title: 'Liên hệ', site_sub: 'Góp ý, gửi tư liệu hoặc báo lỗi nội dung',
+          form_title: 'Gửi góp ý / liên hệ', form_desc: 'Bạn có thể gửi góp ý, tài liệu hoặc báo lỗi nội dung. Vì site tĩnh, chúng tôi hỗ trợ gửi qua mail client (mailto) hoặc Google Form (nhúng).',
+          label_name: 'Họ và tên', label_email: 'Email', label_method: 'Gửi bằng', label_google: 'URL Google Form (tùy chọn)',
+          label_subject: 'Chủ đề', label_message: 'Nội dung', label_attach: 'URL tài liệu (tùy chọn)',
+          btn_send: 'Gửi', btn_save_draft: 'Lưu nháp', btn_clear: 'Xóa', btn_preview_mail: 'Xem mailto', btn_copy_mailto: 'Sao chép mailto',
+          preview_title: 'Xem trước nội dung email (mailto)', info_title: 'Thông tin liên hệ', embed_title: 'Nhúng Google Form', notes_title: 'Ghi chú',
+          no_mailto_support: 'Trình duyệt không hỗ trợ sao chép tự động. Dưới đây là mailto link:',
+          mailto_copied: 'Đã copy mailto vào clipboard.',
+          alert_name: 'Vui lòng nhập họ tên.', alert_email: 'Vui lòng nhập email hợp lệ.', alert_message: 'Vui lòng nhập nội dung.',
+          alert_clear: 'Xóa toàn bộ nội dung hiện tại?', alert_no_gform: 'Bạn chưa điền link Google Form. Mở mail client thay thế?',
+          alert_invalid_gform: 'URL không phải Google Form hoặc không nhận diện được.',
+          alert_draft_saved: 'Đã lưu nháp.'
+        },
+        en: {
+          site_title: 'Contact', site_sub: 'Feedback, submit materials or report content issues',
+          form_title: 'Send feedback / contact', form_desc: 'You can send feedback, files, or report issues. For a static site we support mailto (open your mail client) or Google Form (embed).',
+          label_name: 'Full name', label_email: 'Email', label_method: 'Send via', label_google: 'Google Form URL (optional)',
+          label_subject: 'Subject', label_message: 'Message', label_attach: 'Document URL (optional)',
+          btn_send: 'Send', btn_save_draft: 'Save draft', btn_clear: 'Clear', btn_preview_mail: 'Preview mailto', btn_copy_mailto: 'Copy mailto',
+          preview_title: 'Mail preview (mailto)', info_title: 'Contact info', embed_title: 'Embed Google Form', notes_title: 'Notes',
+          no_mailto_support: 'Browser cannot copy automatically. Here is the mailto link:',
+          mailto_copied: 'Mailto link copied to clipboard.',
+          alert_name: 'Please enter your name.', alert_email: 'Please enter a valid email.', alert_message: 'Please enter a message.',
+          alert_clear: 'Clear all current content?', alert_no_gform: 'No Google Form link provided. Open mail client instead?',
+          alert_invalid_gform: 'URL not recognized as a Google Form.',
+          alert_draft_saved: 'Draft saved.'
+        }
+      };
+
+      // DOM refs for i18n
+      const nodes = {
+        siteTitle: document.getElementById('site-title'), siteSub: document.getElementById('site-sub'),
+        formTitle: document.getElementById('form-title'), formDesc: document.getElementById('form-desc'),
+        labelName: document.getElementById('label-name'), labelEmail: document.getElementById('label-email'),
+        labelMethod: document.getElementById('label-method'), labelGoogle: document.getElementById('label-google'),
+        labelSubject: document.getElementById('label-subject'), labelMessage: document.getElementById('label-message'),
+        labelAttach: document.getElementById('label-attach'), btnSend: document.getElementById('btn-send'),
+        btnSaveDraft: document.getElementById('save-draft')?.querySelector('span') || document.getElementById('save-draft'), // Handle if span is added
+        btnClear: document.getElementById('clear-form')?.querySelector('span') || document.getElementById('clear-form'),
+        btnPreviewMail: document.getElementById('preview-mail')?.querySelector('span') || document.getElementById('preview-mail'),
+        btnCopyMailto: document.getElementById('copy-mailto')?.querySelector('span') || document.getElementById('copy-mailto'),
+        previewTitle: document.getElementById('preview-title'), infoTitle: document.getElementById('info-title'),
+        embedTitle: document.getElementById('embed-title'), notesTitle: document.getElementById('notes-title')
+      };
+      
+      // (Bỏ qua các nút icon vì chúng không có text)
+
+      function applyLang(lang){
+        const t = i18n[lang] || i18n.vi;
+        nodes.siteTitle.textContent = t.site_title;
+        nodes.siteSub.textContent = t.site_sub;
+        nodes.formTitle.textContent = t.form_title;
+        nodes.formDesc.textContent = t.form_desc;
+        nodes.labelName.innerHTML = t.label_name + ' <span aria-hidden="true" style="color:var(--primary)">*</span>';
+        nodes.labelEmail.innerHTML = t.label_email + ' <span aria-hidden="true" style="color:var(--primary)">*</span>';;
+        nodes.labelMethod.textContent = t.label_method;
+        nodes.labelGoogle.textContent = t.label_google;
+        nodes.labelSubject.textContent = t.label_subject;
+        nodes.labelMessage.innerHTML = t.label_message + ' <span aria-hidden="true" style="color:var(--primary)">*</span>';
+        nodes.labelAttach.textContent = t.label_attach;
+        nodes.btnSend.textContent = t.btn_send;
+        // Cập nhật text cho các icon-btn nếu chúng có text
+        // (Hiện tại chúng chỉ có icon, nên bỏ qua)
+        nodes.previewTitle.textContent = t.preview_title;
+        nodes.infoTitle.textContent = t.info_title;
+        nodes.embedTitle.textContent = t.embed_title;
+        nodes.notesTitle.textContent = t.notes_title;
+        
+        // Cập nhật placeholder
+        nameEl.placeholder = t.label_name.replace(/ <.*/, ''); // Bỏ dấu *
+        emailEl.placeholder = 'you@example.com';
+        subjectEl.placeholder = t.label_subject + '...';
+        messageEl.placeholder = t.label_message.replace(/ <.*/, '') + '...';
+        attachEl.placeholder = t.label_attach.replace(/ <.*/, '') + '...';
+      }
+
+      const savedLang = localStorage.getItem('dcl_lang') || 'vi';
+      langSelect.value = savedLang;
+      applyLang(savedLang);
+      langSelect.addEventListener('change', (e)=> {
+        applyLang(e.target.value);
+        localStorage.setItem('dcl_lang', e.target.value);
+        updatePreview(); // Cập nhật preview khi đổi ngôn ngữ
+      });
+
+      /* ---------------------------
+         Palette & theme controls
+         --------------------------- */
+      function applyTheme(theme) {
+          htmlEl.setAttribute('data-theme', theme);
+          localStorage.setItem('dcl_theme_v6', theme);
+          if (themeIconLight && themeIconDark) {
+               themeIconLight.classList.toggle('hidden', theme === 'dark');
+               themeIconDark.classList.toggle('hidden', theme === 'light');
+          }
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const storedTheme = localStorage.getItem('dcl_theme_v6') || (prefersDark ? 'dark' : 'light');
+      applyTheme(storedTheme);
+      themeToggleBtn?.addEventListener('click', ()=> {
+        const newTheme = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+      });
+      
+      // Bỏ logic paletteSelect
+
+      /* ---------------------------
+         Mobile Menu
+         --------------------------- */
+      function openMobileNav() { mobileNavOverlay.style.display = 'flex'; mobileNavOverlay.setAttribute('aria-hidden', 'false'); mobileMenuToggle?.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; mobileNavClose?.focus(); }
+      function closeMobileNav() { mobileNavOverlay.style.display = 'none'; mobileNavOverlay.setAttribute('aria-hidden', 'true'); mobileMenuToggle?.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; mobileMenuToggle?.focus(); }
+      mobileMenuToggle?.addEventListener('click', openMobileNav);
+      mobileNavClose?.addEventListener('click', closeMobileNav);
+      mobileNavOverlay?.querySelectorAll('a').forEach(link => { link.addEventListener('click', closeMobileNav); });
+      function checkNavDisplay() { const isMobile = window.innerWidth <= 1024; mobileMenuToggle?.classList.toggle('hidden', !isMobile); document.querySelector('.main-navigation')?.style.setProperty('display', isMobile ? 'none' : '', 'important'); if (!isMobile && mobileNavOverlay?.style.display === 'flex') { closeMobileNav(); } }
+      checkNavDisplay(); window.addEventListener('resize', checkNavDisplay);
+
+      /* ---------------------------
+         Form logic
+         --------------------------- */
+      method.addEventListener('change', ()=>{
+        if(method.value === 'google'){ googleRow.style.display = 'block'; renderEmbeddedForm(); }
+        else { googleRow.style.display = 'none'; embeddedArea.innerHTML = ''; }
+        updatePreview();
+      });
+
+      function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+      function buildMailto(){
+        const to = 'gopy@lichsuviet.vn'; // Cập nhật email
+        const name = nameEl.value.trim();
+        const email = emailEl.value.trim();
+        const subject = subjectEl.value.trim() || (langSelect.value === 'en' ? 'Feedback / Contact' : 'Góp ý / Liên hệ');
+        const message = messageEl.value.trim();
+        const attach = attachEl.value.trim();
+        let body = '';
+        if(name) body += (langSelect.value === 'en' ? 'Name: ' : 'Tên: ') + name + '\n';
+        if(email) body += 'Email: ' + email + '\n\n';
+        body += (message || '') + '\n\n';
+        if(attach) body += (langSelect.value === 'en' ? 'Attachment: ' : 'Tài liệu: ') + attach + '\n';
+        const bodyEncoded = encodeURIComponent(body).replace(/%0A/g, '%0D%0A');
+        return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${bodyEncoded}`;
+      }
+
+      function updatePreview(){
+        const name = nameEl.value.trim();
+        const email = emailEl.value.trim();
+        const subject = subjectEl.value.trim() || (langSelect.value === 'en' ? '[No subject]' : '[Không có chủ đề]');
+        const message = messageEl.value.trim() || (langSelect.value === 'en' ? '[No message]' : '[Không có nội dung]');
+        const attach = attachEl.value.trim() || (langSelect.value === 'en' ? '[No attachment]' : '[Không có]');
+        previewEl.textContent = `To: gopy@lichsuviet.vn\nSubject: ${subject}\n\n${langSelect.value === 'en' ? 'Name' : 'Tên'}: ${name}\nEmail: ${email}\n\n${message}\n\n${langSelect.value === 'en' ? 'Attachment' : 'Tài liệu'}: ${attach}`;
+      }
+      [nameEl, emailEl, subjectEl, messageEl, attachEl].forEach(i => i.addEventListener('input', updatePreview));
+      updatePreview();
+
+      function saveDraft(){
+        const draft = {
+          name: nameEl.value, email: emailEl.value, subject: subjectEl.value,
+          message: messageEl.value, attach: attachEl.value,
+          method: method.value, googleUrl: googleUrl.value, lang: langSelect.value
+        };
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+        alert(i18n[langSelect.value].alert_draft_saved);
+      }
+      function loadDraft(){
+        try{
+          const s = localStorage.getItem(DRAFT_KEY); if(!s) return;
+          const d = JSON.parse(s);
+          nameEl.value = d.name || ''; emailEl.value = d.email || '';
+          subjectEl.value = d.subject || ''; messageEl.value = d.message || '';
+          attachEl.value = d.attach || '';
+          if(d.method) method.value = d.method;
+          if(d.googleUrl) googleUrl.value = d.googleUrl;
+          if(d.lang) { langSelect.value = d.lang; applyLang(d.lang); }
+          method.dispatchEvent(new Event('change')); updatePreview();
+        }catch(e){}
+      }
+      loadDraft();
+
+      clearBtn.addEventListener('click', ()=>{
+        if(!confirm(i18n[langSelect.value].alert_clear)) return;
+        form.reset();
+        googleRow.style.display = 'none'; embeddedArea.innerHTML = '';
+        localStorage.removeItem(DRAFT_KEY); updatePreview();
+      });
+
+      previewMailBtn.addEventListener('click', (e)=> { e.preventDefault(); updatePreview(); alert(i18n[langSelect.value].preview_title + ':\n\n' + previewEl.textContent); });
+
+      copyMailBtn.addEventListener('click', (e)=>{
+        e.preventDefault(); const mailto = buildMailto();
+        if(navigator.clipboard){
+          navigator.clipboard.writeText(mailto).then(()=> alert(i18n[langSelect.value].mailto_copied), ()=> alert(i18n[langSelect.value].no_mailto_support + '\n' + mailto));
+        } else { alert(i18n[langSelect.value].no_mailto_support + '\n' + mailto); }
+      });
+
+      form.addEventListener('submit', (ev)=>{
+        ev.preventDefault();
+        const lang = langSelect.value;
+        const name = nameEl.value.trim(); const email = emailEl.value.trim(); const message = messageEl.value.trim();
+        if(!name){ alert(i18n[lang].alert_name); nameEl.focus(); return; }
+        if(!email || !isValidEmail(email)){ alert(i18n[lang].alert_email); emailEl.focus(); return; }
+        if(!message){ alert(i18n[lang].alert_message); messageEl.focus(); return; }
+
+        const chosen = method.value;
+        if(chosen === 'mailto'){
+          window.location.href = buildMailto();
+          localStorage.removeItem(DRAFT_KEY);
+        } else if(chosen === 'google'){
+          const url = (googleUrl.value || '').trim();
+          if(url){
+            if(isGoogleFormURL(url)){ renderEmbeddedForm(); setTimeout(()=> { embeddedArea.scrollIntoView({behavior:'smooth'}); }, 200); }
+            else { window.open(url, '_blank'); }
+          } else {
+            if(confirm(i18n[lang].alert_no_gform)){ window.location.href = buildMailto(); localStorage.removeItem(DRAFT_KEY); }
+          }
+        }
+      });
+
+      function isGoogleFormURL(u){ try{ const x = new URL(u); return x.hostname.includes('docs.google.com') && /\/forms\/d\/e\/|\/forms\/d\//.test(x.pathname + x.search); }catch(e){ return false; } }
+
+      function renderEmbeddedForm(){
+        const url = (googleUrl.value||'').trim();
+        embeddedArea.innerHTML = '';
+        if(!url) return;
+        if(!isGoogleFormURL(url)){ const p = document.createElement('p'); p.className = 'small-muted'; p.textContent = i18n[langSelect.value].alert_invalid_gform; embeddedArea.appendChild(p); return; }
+        let embed = url;
+        if(embed.indexOf('embedded=true') === -1){ if(embed.indexOf('?') === -1) embed = embed + '?embedded=true'; else embed = embed + '&embedded=true'; }
+        const wrap = document.createElement('div'); wrap.className = 'iframe-wrap'; wrap.style = 'height:520px';
+        wrap.innerHTML = `<iframe src="${embed}" style="width:100%;height:100%;border:0" title="Google Form"></iframe>`;
+        embeddedArea.appendChild(wrap);
+      }
+      googleUrl.addEventListener('input', renderEmbeddedForm);
+
+      saveDraftBtn.addEventListener('click', (e)=> { e.preventDefault(); saveDraft(); });
+      
+      
+      document.addEventListener('keydown', (e)=> { if(e.key === 'Escape'){ if (mobileNavOverlay?.style.display === 'flex') { closeMobileNav(); } } });
+
+      nameEl.focus();
+      updatePreview();
+      
+    })();
+  </script>
+  <footer>
+      <div class="footer-content">
+          <div class="footer-column">
+              <h4>Giới thiệu</h4>
+              <p>Trang web "Dòng Chảy Lịch Sử" cung cấp thông tin tóm tắt về lịch sử Việt Nam qua các thời kỳ, phục vụ mục đích tham khảo và học tập.</p>
+          </div>
+          <div class="footer-column">
+              <h4>Liên hệ</h4>
+              <a href="mailto:info@lichsuviet.vn">Email: info@lichsuviet.vn</a>
+              <a href="tel:+84123456789">Điện thoại: (012) 345-6789</a>
+              <p>Địa chỉ: 123 Đường ABC, Hà Nội</p>
+          </div>
+          <div class="footer-column">
+              <h4>Hỗ trợ</h4>
+              <a href="faq.html">Câu hỏi thường gặp</a>
+              <a href="lienhe.html">Góp ý nội dung</a>
+              <a href="policy.html">Chính sách bảo mật</a>
+          </div>
+      </div>
+ <div class="wrap"> <div class="footer-copyright">
+                 <p class="muted" style="color: red; font-weight: bold; font-size: 20px; text-align: center;">
+  🇻🇳 Hoàng Sa, Trường Sa là của Việt Nam 🇻🇳
+</p>
+
+                        <p class="muted">© Dòng Chảy Lịch Sử Việt . Made by Bùi Lê Hậu . Thông tin tổng hợp cho mục đích tham khảo.</p>
+                        
+                    </div>
+                </div>
+  </footer>
+</body>
+</html>

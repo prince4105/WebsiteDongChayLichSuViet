@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dựng nước – Giữ nước · Dòng Chảy Lịch Sử Việt</title>
+  <meta name="description" content="Các cuộc kháng chiến, chiến công anh hùng và hồ sơ nhân vật lịch sử Việt Nam.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+ 
+       --bg-light: #fdfbf6; --card-light: #ffffff; --primary-light: #8C1C13; --accent-light: #B08D57;
+       --text-light: #3a2e27; --muted-light: #7a6a5f; --border-light: #e0d8ce;
+       --shadow-light: 0 15px 40px rgba(90, 70, 58, 0.12);
+       --glass-light: rgba(253, 251, 246, 0.85); --input-bg-light: #f7f3ed;
+       --pattern-light: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0d8ce' fill-opacity='0.08'%3E%3Cpath d='M0 0h40v40H0zM40 40h40v40H40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+       --bg-dark: #141210; --card-dark: #1f1d1b; --primary-dark: var(--accent-light); --accent-dark: #cea86a;
+       --text-dark: #f0e6d8; --muted-dark: #a89f94; --border-dark: #4a443e;
+       --shadow-dark: 0 18px 55px rgba(0, 0, 0, 0.45);
+       --glass-dark: rgba(20, 18, 16, 0.85); --input-bg-dark: #2c2926;
+       --pattern-dark: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a443e' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0zM40 40h40v40H40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+       --bg: var(--bg-light); --card: var(--card-light); --primary: var(--primary-light); --accent: var(--accent-light);
+       --text: var(--text-light); --muted: var(--muted-light); --border: var(--border-light); --shadow: var(--shadow-light);
+       --glass-bg: var(--glass-light); --input-bg: var(--input-bg-light); --pattern: var(--pattern-light);
+
+      --radius: 14px; --radius-sm: 8px; --maxw: 1200px; --header-height: 76px;
+
+       --font-body: 'Inter', system-ui, Arial, sans-serif;
+       --font-heading: 'EB Garamond', serif;
+       --font-script: 'Dancing Script', cursive; 
+   
+       --accent-rgb: 176, 141, 87; --primary-rgb: 140, 28, 19; --text-rgb: 58, 46, 39;
+    }
+    [data-theme="dark"]{
+      --bg: var(--bg-dark); --card: var(--card-dark); --primary: var(--primary-dark); --accent: var(--accent-dark);
+      --text: var(--text-dark); --muted: var(--muted-dark); --border: var(--border-dark); --shadow: var(--shadow-dark);
+      --glass-bg: var(--glass-dark); --input-bg: var(--input-bg-dark); --pattern: var(--pattern-dark);
+      --accent-rgb: 206, 168, 106; --primary-rgb: 176, 141, 87; --text-rgb: 240, 230, 216;
+      color-scheme: dark;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html{ scroll-behavior:smooth; scroll-padding-top: calc(var(--header-height) + 20px); }
+    body{
+        margin:0; padding: 0; font-family: var(--font-body); background-color: var(--bg);
+        background-image: var(--pattern); color: var(--text); transition: background 0.3s, color 0.3s;
+        padding-top: var(--header-height); font-size: 16px; line-height: 1.7;
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    a{color:var(--primary);text-decoration:none; transition: color 0.2s ease-out, opacity 0.2s ease-out;}
+    a:hover { color: var(--accent); opacity: 0.9; }
+    img { max-width: 100%; height: auto; display: block; border-radius: var(--radius-sm); }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding: 0 40px;}
+
+    /* === Header === */
+ /* === Header Cố Định Dạng Kính === */
+    .sticky-header {
+        position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+        background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); /* Blur mạnh hơn */
+        border-bottom: 1px solid var(--border); transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+        height: var(--header-height); display: flex; align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Thêm shadow nhẹ */
+    }
+     [data-theme="dark"] .sticky-header { box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+    .header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .header-brand { display: flex; align-items: center; gap: 14px; color: var(--primary); transition: transform 0.2s ease-out;}
+    .header-brand:hover { transform: scale(2.03); } /* Hiệu ứng hover logo */
+    .main-navigation ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+    .main-navigation a {
+        display: block; padding: 10px 18px; font-weight: 500; color: var(--text); border-radius: 8px;
+        transition: background 0.2s, color 0.2s, transform 0.2s; font-size: 1rem; position: relative;
+    }
+    .main-navigation a:hover { background: var(--glass); color: var(--primary); transform: translateY(-2px); }
+    .main-navigation a.active-page { color: var(--primary); font-weight: 600; background: transparent; }
+    .main-navigation a.active-page::after {
+        content: ''; position: absolute; bottom: 5px; left: 18px; right: 18px; height: 3px;
+        background: var(--primary); border-radius: 1.5px;
+        animation: slideIn 0.3s ease-out; /* Hiệu ứng gạch chân */
+    }
+    @keyframes slideIn { from { width: 0; left: 50%; } to { width: calc(100% - 36px); left: 18px; } }
+    [data-theme="dark"] .main-navigation a.active-page { color: var(--primary); }
+    [data-theme="dark"] .main-navigation a.active-page::after { background: var(--primary); }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .icon-btn{
+        background: transparent; border: 1px solid var(--border); padding: 12px; /* Lớn hơn */
+        border-radius: 10px; color: var(--muted); cursor: pointer;
+        transition: all 0.2s ease-out; line-height: 1; display: flex;
+        align-items: center; justify-content: center; position: relative;
+    }
+    .icon-btn:hover { background: var(--glass); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
+    .icon-btn svg { width: 18px; height: 18px; } /* Kích thước icon chuẩn */
+
+    #theme-toggle .theme-icon-dark, #theme-toggle .theme-icon-light { transition: opacity 0.3s; }
+
+/* === Thanh lọc dính (sticky filters bar) === */
+    .sticky-filters-bar {
+        position: sticky;
+        top: var(--header-height); /* Dính ngay dưới header chính */
+        background: var(--glass-bg);
+        backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--border);
+        z-index: 999; /* Dưới header (1000) */
+        padding: 16px 0;
+    }
+    .sticky-filters-bar .filters {
+        margin: 0; /* Ghi đè margin mặc định nếu có */
+        flex-grow: 1;
+    }
+
+    /* Nội dung chính */
+    .content-area { padding: 80px 0; }
+
+    /* Page Header */
+    .page-header {
+        margin-bottom: 72px; text-align: center; position: relative; padding: 60px 20px;
+        border-radius: var(--radius); overflow: hidden;
+        background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.03), transparent 70%),
+                    linear-gradient(215deg, rgba(var(--accent-rgb), 0.05), transparent 60%);
+        border: 1px solid var(--border); box-shadow: inset 0 0 100px rgba(var(--text-rgb), 0.04);
+    }
+    [data-theme="dark"] .page-header { background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.08), transparent 70%), linear-gradient(215deg, rgba(var(--accent-rgb), 0.06), transparent 60%); box-shadow: inset 0 0 120px rgba(var(--text-rgb), 0.06); }
+    
+    /* === THAY ĐỔI: Chỉnh sửa H1 sang font Thư Pháp === */
+    h1.page-title{ 
+        margin:0 0 16px 0; color:var(--primary); 
+        font-family: var(--font-script); /* ĐỔI SANG THƯ PHÁP */
+        font-size: 6.5rem; /* Tăng nhẹ kích thước */
+        font-weight: 700; 
+        line-height: 1.1; 
+        letter-spacing: 0px; 
+        text-shadow: 3px 3px 8px rgba(var(--text-rgb), 0.1); 
+    }
+    .page-subtitle{color:var(--muted); font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8; font-family: var(--font-script); font-style: normal; font-weight: 500;} /* Tiêu đề phụ cũng dùng font thư pháp */
+
+    main.card{
+        background:var(--card); padding: 56px; border-radius:var(--radius);
+        box-shadow:var(--shadow); border: 1px solid var(--border);
+        transition: background 0.3s, border 0.3s;
+        background-image: var(--pattern); background-size: 100px 100px;
+        background-blend-mode: overlay;
+    }
+
+    .toolbar { 
+        margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); 
+    }
+    .search-row{display:flex;gap:12px; width: 100%;}
+    .search-row input{
+        flex:1; padding:16px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+        background: var(--input-bg); color:inherit; font-size: 1.1rem; transition: all 0.25s ease-out;
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.06);
+    }
+     .search-row input::placeholder { color: var(--muted); opacity: 0.8; }
+     .search-row input:focus { outline: none; border-color: var(--primary); background: var(--card); box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1), inset 0 1px 3px rgba(0,0,0,0.06); }
+    .filters{display:flex;gap:12px;flex-wrap:wrap;}
+    .tag{ /* Giống con dấu son */
+        padding: 10px 20px; border-radius: var(--radius-sm); background: transparent;
+        cursor: pointer; font-weight: 600; color: var(--muted);
+        border: 2px solid var(--border); transition: all 0.25s ease-out;
+        font-size: 0.95rem; letter-spacing: 0.5px; position: relative; overflow: hidden;
+        box-shadow: 3px 3px 0px var(--border);
+    }
+    .tag:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0px var(--accent); border-color: var(--accent); color: var(--accent); background: var(--glass);}
+    .tag:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0px var(--primary); }
+    .tag.active{
+        background: var(--primary); color: #fff; border-color: var(--primary);
+        font-weight: 700; transform: none; box-shadow: 4px 4px 0px rgba(var(--primary-rgb), 0.3);
+    }
+    [data-theme="dark"] .tag { box-shadow: 3px 3px 0px var(--border-dark); }
+    [data-theme="dark"] .tag:hover { box-shadow: 5px 5px 0px var(--accent-dark); border-color: var(--accent-dark); color: var(--accent-dark); }
+    [data-theme="dark"] .tag.active { color: var(--bg-dark); box-shadow: 4px 4px 0px rgba(var(--primary-rgb), 0.4); }
+
+    /* Layout Grid */
+    .grid{display:grid;grid-template-columns:minmax(0, 2.5fr) minmax(0, 1fr);gap:48px;align-items:start}
+    .section{margin-bottom:56px}
+    .section h2 {
+        font-family: var(--font-script); /* THAY ĐỔI: Tiêu đề H2 dùng font thư pháp */
+        font-size: 2.8rem; /* Tăng nhẹ font H2 */
+        color: var(--text); margin: 0 0 16px 0; padding-bottom: 12px;
+        border-bottom: 1px solid var(--border); position: relative;
+    }
+     .section h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 70px; height: 3px; background-color: var(--primary); border-radius: 1.5px; }
+    .section > p.muted { font-size: 1.05rem; margin-bottom: 24px; line-height: 1.8; color: var(--muted); font-family: var(--font-heading); font-style: italic;}
+
+    /* Nút */
+    .btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; border:0; font-weight: 600; cursor:pointer; transition: all 0.25s ease-out; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2); }
+    .btn:hover { transform: translateY(-3px); filter: brightness(1.1); box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.3); }
+    [data-theme="dark"] .btn { color: var(--bg-dark); box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.25); }
+    [data-theme="dark"] .btn:hover { box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.35); }
+    .bookmark-btn { background: transparent; border: 1px solid var(--border); padding: 8px 12px; border-radius: 8px; cursor: pointer; color: var(--muted); font-weight: 500; transition: all 0.2s ease-out;}
+    .bookmark-btn:hover { background: var(--glass); color: var(--primary); border-color: var(--primary);}
+    [data-theme="dark"] .bookmark-btn { border-color: var(--border-dark); }
+    [data-theme="dark"] .bookmark-btn.saved { background: var(--primary); color: var(--bg-dark); border-color: var(--primary);}
+
+
+    /* === THAY ĐỔI: Bố cục 1 cột cho danh sách kháng chiến === */
+    .cards{display:grid; grid-template-columns: 1fr; gap: 24px;}
+    .card-item{
+        background: var(--card); padding: 24px; border-radius: var(--radius);
+        border: 1px solid var(--border); box-shadow: var(--shadow-light);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        display: grid; grid-template-columns: 200px 1fr; /* Ảnh | Nội dung */
+        gap: 24px; align-items: center;
+    }
+    .card-item:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+    .card-item-image { width: 200px; height: 160px; object-fit: cover; border-radius: var(--radius-sm); }
+    .card-item h4{ margin: 0 0 6px 0; font-family: var(--font-heading); font-size: 1.5rem; color: var(--text); }
+    .card-item .meta{font-size:0.9rem;color:var(--muted); margin-bottom: 10px; font-weight: 500;}
+    .card-item p.muted { margin: 0 0 12px 0; line-height: 1.6; }
+    .card-item .actions { display:flex; gap:10px; align-items: center; margin-top: auto;}
+    [data-theme="dark"] .card-item { background: var(--card-dark); border-color: var(--border-dark); box-shadow: var(--shadow-dark); }
+    [data-theme="dark"] .card-item:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.4); border-color: var(--primary); }
+
+    /* hero profiles */
+    .profiles{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:24px;margin-top:24px}
+    .profile{
+        background:var(--card); padding: 0; border-radius: var(--radius); text-align:center;
+        border: 1px solid var(--border); transition: all 0.3s ease-out; overflow: hidden;
+        box-shadow: var(--shadow-light);
+    }
+     .profile:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow); }
+    .profile img{width:100%;height:200px;object-fit:cover; display: block; border-bottom: 1px solid var(--border); transition: transform 0.4s ease-out;}
+    .profile:hover img { transform: scale(1.05); }
+    .profile-content { padding: 24px; }
+    .profile h5 { margin: 0 0 8px 0; font-family: var(--font-heading); font-size: 1.4rem; color: var(--text); }
+    .profile .muted { font-size: 0.9rem; margin-bottom: 16px; line-height: 1.5; }
+    [data-theme="dark"] .profile { background: var(--card-dark); border-color: var(--border-dark); }
+
+    /* timeline strip - Thẻ tre */
+    .timeline-strip{ display:flex; gap:16px; overflow-x: auto; padding: 20px 4px; margin: 20px -4px 0 -4px; scrollbar-width: thin; scrollbar-color: var(--muted) transparent; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--glass); }
+    .timeline-strip::-webkit-scrollbar { height: 8px; } .timeline-strip::-webkit-scrollbar-thumb { background-color: var(--accent); border-radius: 4px; border: 2px solid var(--glass); }
+    [data-theme="dark"] .timeline-strip::-webkit-scrollbar-thumb { border-color: var(--glass); }
+    .timeline-chip{
+        min-width:180px; padding: 16px 20px; border-radius: var(--radius-sm);
+        background: var(--card); border: 1px solid var(--border); cursor:pointer;
+        transition: all 0.25s ease-out; text-align: center;
+        box-shadow: var(--shadow-light); flex-shrink: 0; position: relative;
+        border-left: 4px solid var(--accent);
+    }
+    .timeline-chip:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow); border-color: var(--accent); }
+    .timeline-chip .year { font-weight:700; color:var(--accent); display: block; margin-bottom: 6px; font-size: 0.9rem; }
+    .timeline-chip .title { font-weight: 600; font-size: 1rem; color: var(--text); }
+    [data-theme="dark"] .timeline-chip { background: var(--card-dark); border-color: var(--border-dark); border-left-color: var(--primary); }
+    [data-theme="dark"] .timeline-chip:hover { border-color: var(--primary); }
+    [data-theme="dark"] .timeline-chip .year { color: var(--primary); }
+    [data-theme="dark"] .timeline-chip .title { color: var(--text-dark); }
+
+    /* aside */
+    .aside .box{ background:var(--card); padding: 28px; border-radius:var(--radius); margin-bottom:28px; border: 1px solid var(--border); box-shadow: var(--shadow-light); position: relative; overflow: hidden; background-image: var(--pattern); background-size: 80px 80px; background-blend-mode: overlay; }
+    [data-theme="dark"] .aside .box { background: var(--card-dark); border-color: var(--border-dark); }
+     .aside .box > * { position: relative; z-index: 1; }
+     .aside h4 { 
+        margin: 0 0 16px 0; font-family: var(--font-script); /* THAY ĐỔI: Tiêu đề H4 dùng font thư pháp */
+        font-size: 2rem; /* Tăng nhẹ font H4 */
+        color: var(--text); padding-bottom: 12px; border-bottom: 1px solid var(--border); position: relative; 
+    }
+     .aside h4::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 50px; height: 3px; background-color: var(--primary); border-radius: 1.5px; }
+     .aside ul { list-style: none; padding: 0; margin: 0; } .aside li { margin-bottom: 12px; }
+     .aside a { font-weight: 500; font-size: 0.95rem; }
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px; margin-top: 16px;}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px;cursor:pointer; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s;}
+    .gallery img:hover { transform: scale(1.04); box-shadow: var(--shadow); }
+
+    /* responsive */
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} .cards{grid-template-columns:1fr} .profiles{grid-template-columns:repeat(auto-fit, minmax(200px, 1fr))} .profile img{height:180px} .aside { margin-top: 40px;} }
+    @media (max-width:640px){ .profiles{grid-template-columns:repeat(auto-fit, minmax(240px, 1fr))} .card-item { grid-template-columns: 1fr; text-align: center;} .card-item-image { width: 100%; height: 180px;} .card-item .actions { justify-content: center;} .toolbar { flex-direction: column; align-items: stretch; } }
+     /* modal */
+    .modal{ position:fixed;inset:0;background:rgba(20, 18, 16, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display:flex;align-items:center;justify-content:center;z-index:1001;display:none; padding: 24px; animation: fadeIn 0.3s ease-out; } .modal-card{ background:var(--card); padding: 40px; border-radius:var(--radius); max-width:800px; width:95%; max-height:90vh; overflow-y:auto; border: 1px solid var(--border); box-shadow: var(--shadow-dark); scrollbar-width: thin; scrollbar-color: var(--muted) var(--card); animation: scaleIn 0.3s ease-out; } .modal-card::-webkit-scrollbar { width: 8px; } .modal-card::-webkit-scrollbar-thumb { background-color: var(--muted); border-radius: 4px; border: 2px solid var(--card);} .modal-header { display:flex;justify-content:space-between;align-items:flex-start;gap:16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); } .modal-header h3 { margin: 0; font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary); line-height: 1.3; } .close-btn{background:transparent;border:0;font-size:30px;cursor:pointer; color: var(--muted); line-height: 1; padding: 0; transition: color 0.2s, transform 0.2s;} .close-btn:hover { color: var(--primary); transform: rotate(90deg) scale(1.1); } .modal-body { margin-top: 24px; line-height: 1.8; font-size: 1.05rem; color: var(--text); } .modal-body p { margin-bottom: 1em; color: var(--muted); } .modal-body img { max-width: 300px; height: auto; float: left; margin: 0 20px 12px 0; border-radius: 8px; border: 1px solid var(--border);} .modal-body .meta { font-size: 0.95rem; color: var(--muted); margin-bottom: 12px; display: block; font-weight: 500;} .modal-footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); display:flex;gap:12px;justify-content:flex-end; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    
+    /* Focus styles */
+    *:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 6px; box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.3); } *:focus:not(:focus-visible) { outline: none; }
+    
+    /* Helper class */
+    .hidden { display: none !important; }
+/* === START: CSS Footer === */
+    footer {
+        margin-top: 64px;
+        padding: 48px 0;
+        background: var(--input-bg); /* Nền nhẹ cho footer */
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 32px;
+        max-width: var(--maxw); /* Sử dụng biến --maxw đã định nghĩa */
+        margin: 0 auto;
+        padding: 0 40px; /* Padding ngang khớp với .wrap */
+        text-align: left;
+    }
+    .footer-column {
+        flex: 1;
+        min-width: 200px; /* Đảm bảo các cột không quá hẹp */
+    }
+    .footer-column h4 {
+        font-family: var(--font-heading); /* Sử dụng font heading đã định nghĩa */
+        font-size: 1.5rem;
+        color: var(--text);
+        margin: 0 0 16px 0;
+        font-weight: 600;
+    }
+    .footer-column p, .footer-column a {
+        color: var(--muted);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        line-height: 1.6; /* Thêm line-height cho dễ đọc */
+    }
+    .footer-column a:hover {
+        color: var(--primary); /* Sử dụng màu primary đã định nghĩa */
+    }
+    .footer-copyright {
+        text-align: center;
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px dashed var(--border);
+        font-size: 0.9rem;
+    }
+     /* Responsive cho footer */
+    @media (max-width: 1024px) {
+        .footer-content { padding: 0 24px; } /* Khớp padding wrap ở tablet */
+    }
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column; /* Xếp chồng cột trên mobile */
+            padding: 0 16px; /* Khớp padding wrap ở mobile nhỏ */
+        }
+    }
+    @media (max-width: 480px) {
+        .footer-content { padding: 0 12px; } /* Khớp padding wrap ở mobile rất nhỏ */
+    }
+    /* === END: CSS Footer === */
+    /* === CSS Nút Chọn Ngôn Ngữ === */
+.language-switcher {
+    display: inline-flex; /* Dùng flex để căn chỉnh tốt hơn */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-left: 16px; /* Khoảng cách với phần tử trước đó */
+    font-size: 0.85rem; /* Cỡ chữ nhỏ hơn một chút */
+    color: var(--muted);
+    border: 1px solid var(--border); /* Thêm viền nhẹ */
+    border-radius: 99px; /* Bo tròn */
+    padding: 2px; /* Khoảng đệm nhỏ bên trong */
+    background-color: var(--input-bg); /* Nền nhẹ */
+}
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 4px 10px; /* Padding nút */
+    cursor: pointer;
+    font-weight: 500; /* Bỏ đậm mặc định */
+    color: var(--muted);
+    transition: all 0.2s ease-in-out;
+    border-radius: 99px; /* Bo tròn nút */
+    line-height: 1; /* Đảm bảo chiều cao nhất quán */
+}
+.lang-btn:hover {
+    color: var(--primary);
+    background-color: var(--glass-bg); /* Hiệu ứng kính khi hover */
+}
+.lang-btn.active {
+    color: #fff; /* Chữ trắng khi active */
+    font-weight: 600; /* Đậm hơn khi active */
+    background-color: var(--primary); /* Nền màu chính khi active */
+    box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.3); /* Đổ bóng nhẹ */
+}
+/* Thêm màu cho dấu | */
+.language-switcher span {
+    padding: 0 2px;
+    color: var(--border);
+}
+/* === END CSS Nút Chọn Ngôn Ngữ === */
+/* Đây là code CSS đã sửa */
+
+  </style>
+</head>
+<body data-theme="light">
+
+   <div class="main-layout">
+    <header class="sticky-header">
+         <a href="trangchu.html" class="header-brand logo-image-mode" title="Dòng Chảy Lịch Sử Việt - Trang Chủ">
+  <img src="images/dclsv.png" alt="Logo website" width="250" style="padding-top: 25px;"> </a>
+            <nav class="main-navigation" aria-label="Điều hướng chính">
+                 <ul>
+                   
+                    <li><a href="lichsu.html">Lịch Sử</a></li>
+                    <li><a href="dungnuocvagiunuoc.html"class="active-page" >Dựng Nước & Giữ Nước</a></li>
+                    <li><a href="vanhoa.html">Văn Hóa</a></li>
+                    <li><a href="khotulieu.html">Tư Liệu</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
+                    <li><a href="lienhe.html">Liên Hệ & Góp ý</a></li>
+                 </ul>
+            </nav>
+            <div class="header-actions">
+                 <div class="language-switcher">
+    <button id="lang-vi" class="lang-btn" data-lang="vi" data-translate-key="langVIE">VIE</button> |
+    <button id="lang-en" class="lang-btn" data-lang="en" data-translate-key="langENG">ENG</button>
+</div>
+                 <button id="theme-toggle" class="icon-btn" title="Chuyển giao diện Sáng/Tối" aria-live="polite">
+                 
+                     <span class="theme-icon-light" aria-label="Chế độ sáng">☀️</span>
+                     <span class="theme-icon-dark hidden" aria-label="Chế độ tối">🌙</span>
+                 </button>
+                  
+            </div>
+        
+    </header>
+  <div class="sticky-filters-bar">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+       <div class="filters" role="toolbar" aria-label="Bộ lọc" style="flex-grow: 1;">
+         <div class="tag active" data-filter="all" role="tab" tabindex="0">Tất cả</div>
+         <div class="tag" data-filter="war" role="tab" tabindex="0">Kháng chiến</div>
+         <div class="tag" data-filter="hero" role="tab" tabindex="0">Nhân vật</div>
+         <div class="tag" data-filter="event" role="tab" tabindex="0">Sự kiện</div>
+       </div>
+       
+       <div style="flex-shrink: 0;">
+          <button id="show-bookmarks" class="icon-btn" title="Xem mục đã lưu">★ Mục đã lưu (<span id="bookmark-count">0</span>)</button>
+       </div>
+    </div>
+  </div>
+  <div class="content-area">
+    <div class="wrap">
+    
+          <div class="page-header">
+          <h1 class="page-title">Dựng Nước & Giữ Nước</h1>
+          <p class="page-subtitle">Các cuộc kháng chiến, chiến công anh hùng và hồ sơ nhân vật lịch sử</p>
+      </div>
+
+      <main class="card" role="main">
+        <div class="toolbar">
+          <div class="search-row" role="search">
+            <input id="global-search" type="search" placeholder="Tìm cuộc kháng chiến, nhân vật (ví dụ: 'Bạch Đằng', 'Hai Bà Trưng')...">
+            <button id="search-clear" class="icon-btn" title="Xóa">✕</button>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:24px">
+          <div>
+            <section class="section" id="overview">
+              <h2 class="section-title" style="font-size: 2.8rem;">Giới thiệu</h2>
+              <p class="muted">Chủ đề "Dựng nước — Giữ nước" tập trung vào những cuộc kháng chiến chống ngoại xâm, các chiến công và nhân vật đã góp phần bảo vệ, xây dựng đất nước. Trang này trình bày tóm tắt các cuộc kháng chiến quan trọng, hồ sơ một số nhân vật tiêu biểu và timeline các mốc.</p>
+            </section>
+
+            <section class="section" id="wars-list">
+              <h2 class="section-title">Kháng chiến & Chiến công</h2>
+              <div class="cards" id="war-cards">
+                {/* cards injected by JS */}
+              </div>
+            </section>
+
+            <section class="section" id="timeline">
+              <h2 class="section-title">Dòng chảy Sự kiện</h2>
+              <div class="timeline-strip" id="timeline-strip" role="list">
+                {/* chips injected */}
+              </div>
+            </section>
+
+            <section class="section" id="profiles">
+              <h2 class="section-title">Hồ sơ Nhân vật</h2>
+              <p class="muted">Một số nhân vật tiêu biểu — click "Xem" để mở hồ sơ chi tiết.</p>
+              <div class="profiles" id="profile-list">
+                {/* profile cards injected */}
+              </div>
+            </section>
+
+            <section class="section" id="readmore" style="border-bottom: none; margin-bottom: 0;">
+              <h2 class="section-title">Đọc thêm</h2>
+              <ul>
+                <li><a href="https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam" target="_blank" rel="noopener">Bài Wikipedia: Lịch sử Việt Nam <span aria-hidden="true">↗</span></a></li>
+                <li><a href="gallery.html">Kho tư liệu: ảnh, bản đồ <span aria-hidden="true">→</span></a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="aside">
+            <div class="aside-box box">
+              <h4>Thông tin nhanh</h4>
+              <div class="muted" style="margin-top:8px; font-size: 0.95rem; line-height: 1.7;">Sử dụng bộ lọc và ô tìm kiếm để lọc nhanh. Nhấn ★ trên mỗi mục để lưu lại xem sau.</div>
+            </div>
+
+            <div class="aside-box box">
+              <h4>Thư viện Ảnh</h4>
+              <div class="gallery" id="gallery">
+
+              </div>
+            </div>
+       
+            <div class="aside-box box map-placeholder">
+                  <h4>Bản đồ Chiến sự (Minh họa)</h4>
+                  <a href="https://baodaklak.vn/chinh-tri/lich-su-truyen-thong/202505/tam-ban-do-quy-trong-chien-dich-dien-bien-phu-eff0212/" title="Xem bản đồ chi tiết (tính năng sắp có)">
+                     <img src="https://baodaklak.vn/file/fb9e3a03798789de0179a1704dea238e/052025/bandodbp_20250525083633.jpg" alt="Bản đồ minh họa các chiến dịch" loading="lazy">
+                  </a>
+                  <p class="muted" style="font-size: 0.9rem; margin-top: 12px;">Minh họa các địa điểm diễn ra các trận đánh lịch sử.</p>
+              </div>
+
+            <div class="aside-box box">
+              <h4>Liên kết nhanh</h4>
+              <ul>
+                <li><a href="#wars-list">Các cuộc kháng chiến</a></li>
+                <li><a href="#profiles">Hồ sơ nhân vật</a></li>
+                <li><a href="#timeline">Dòng chảy Sự kiện</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="profile-modal" class="modal" style="display:none" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Tiêu đề</h3>
+        <button id="modal-close" class="close-btn" aria-label="Đóng">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+      <div class="modal-footer">
+        <button id="modal-bookmark" class="icon-btn">★ Lưu</button>
+        <button id="modal-share" class="icon-btn">🔗 Chia sẻ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="image-lightbox" style="position:fixed;inset:0;background:rgba(18, 18, 16, 0.95);display:flex;align-items:center;justify-content:center;z-index:1002;cursor:pointer; display: none; animation: fadeIn 0.25s ease-out;">
+      <img src="" alt="Xem ảnh lớn" style="max-width:92%;max-height:92%;border-radius:var(--radius-sm); display:block; margin: auto; border: 5px solid var(--card); box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+      <button id="lightbox-close" aria-label="Đóng ảnh" style="position:absolute; top: 25px; right: 25px; font-size: 2.8rem; color: #fff; background:none; border:none; cursor:pointer; opacity: 0.8; transition: opacity 0.2s, transform 0.2s;">&times;</button>
+   </div>
+
+  <script>
+    (function(){
+      // Sample data
+      const WARS = [
+        { id:'haibatrung40', year:'40 SCN', title:'Khởi nghĩa Hai Bà Trưng', summary:'Chống ách đô hộ của nhà Đông Hán, lập quốc trong 3 năm.', tags:['war','event'], content:'Hai Bà Trưng (Trưng Trắc và Trưng Nhị) lãnh đạo cuộc khởi nghĩa lớn đầu tiên, đánh đuổi Thái thú Tô Định. Trưng Trắc lên ngôi vua, lập kinh đô tại Mê Linh.', image: 'https://images.squarespace-cdn.com/content/v1/55b6b656e4b02f9283ad1d54/1530470359571-36JQ5AS7OLWL5AAZ1W4W/hai-ba-trung-1.jpg' },
+        { id:'bachdang938', year:'938', title:'Chiến thắng Bạch Đằng', summary:'Đánh tan quân Nam Hán, Ngô Quyền xưng vương, mở nền độc lập.', tags:['war','battle'], content:'Ngô Quyền dùng kế cắm cọc gỗ bịt sắt nhọn dưới lòng sông Bạch Đằng, nhử quân Nam Hán vào trận địa và tiêu diệt hoàn toàn thủy quân địch.', image: 'https://i.makeagif.com/media/11-29-2015/1srny4.gif' },
+        { id:'chongtong1077', year:'1075-1077', title:'Kháng chiến chống Tống', summary:'Lý Thường Kiệt chủ động tấn công "phạt Tống", sau đó lập phòng tuyến sông Như Nguyệt.', tags:['war'], content:'Cuộc kháng chiến do Lý Thường Kiệt lãnh đạo. Nổi tiếng với chiến thuật "tiên phát chế nhân" và trận chiến trên phòng tuyến sông Như Nguyệt với bài thơ "Nam quốc sơn hà".', image: 'https://nguonluc.com.vn/uploads/images/2023/02/09/ly-thuong-kiet-chien-tranh-tong-viet-01-1675916093.jpg' },
+        { id:'chongnguyen1200', year:'TK 13', title:'Ba lần kháng chiến chống Mông-Nguyên', summary:'Quân dân nhà Trần ba lần đánh bại đội quân xâm lược hùng mạnh nhất thế giới.', tags:['war'], content:'Dưới sự lãnh đạo của các vua Trần và Hưng Đạo Vương Trần Quốc Tuấn, quân dân Đại Việt đã thực hiện "vườn không nhà trống" và các trận thắng lẫy lừng (Đông Bộ Đầu, Hàm Tử, Chương Dương, Bạch Đằng 1288).', image: 'https://cdn-i.vtcnews.vn/resize/th/upload/2019/12/27/1-11282448.jpg' },
+        { id:'dienbien1954', year:'1954', title:'Chiến thắng Điện Biên Phủ', summary:'Đánh bại thực dân Pháp, kết thúc chiến tranh Đông Dương.', tags:['war','modern','battle'], content:'Trận quyết chiến chiến lược tại Điện Biên Phủ dưới sự chỉ huy của Tướng Võ Nguyên Giáp, buộc Pháp ký Hiệp định Genève.', image:'https://i.makeagif.com/media/5-13-2018/gRTZA8.gif' },
+        { id:'cmthang8_1945', year:'1945', title:'Cách mạng Tháng Tám', summary:'Giành chính quyền từ tay phát xít Nhật, lập nên nước VNDCCH.', tags:['event','revolution'], content:'Chớp thời cơ Nhật đầu hàng Đồng minh, Việt Minh lãnh đạo toàn dân tổng khởi nghĩa. Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập.', image:'https://thunghiemngaynay.vn/upload_images/images/chao%20mung%20quoc%20khanh%202-9.jpg'  },
+        { id:'thongnhat1975', year:'1975', title:'Đại thắng Mùa Xuân 1975', summary:'Kết thúc 21 năm kháng chiến chống Mỹ, thống nhất đất nước.', tags:['event','modern'], content:'Với chiến dịch Hồ Chí Minh lịch sử, quân giải phóng tiến vào Sài Gòn, kết thúc chiến tranh, non sông thu về một mối.', image: 'https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/4/30/1975-34845.gif?width=360&s=1OwsgoDE8dlkmjiHs7GgnQ'}
+      ];
+      const PROFILES = [
+   { 
+    id:'hochiminh', 
+    name:'Hồ Chí Minh', 
+    role:'Chủ tịch nước', 
+    bio:'Lãnh tụ thiên tài, người thầy vĩ đại của cách mạng Việt Nam, Anh hùng giải phóng dân tộc, Danh nhân văn hóa thế giới. Người sáng lập Đảng Cộng sản Việt Nam và khai sinh nước Việt Nam Dân chủ Cộng hòa.', 
+    image:'https://lamdong.gov.vn/sites/congan/bao-ve-nen-tang-tu-tuong-cua-dang/SiteAssets/SitePages/Xuyen-tac-boi-nho-Chu-tich-Ho-Chi-Minh-la-hanh-dong-dang-len-an/27439-bac-ho_20230518191851.jpg', 
+    born:'1890', 
+    died:'1969' 
+  },
+  { 
+    id:'vonguyengiap', 
+    name:'Võ Nguyên Giáp', 
+    role:'Đại tướng', 
+    bio:'"Người anh cả" của Quân đội Nhân dân Việt Nam, Tổng tư lệnh chỉ huy chiến dịch Điện Biên Phủ (1954) và chiến dịch Hồ Chí Minh (1975).', 
+    image:'https://imgnvsk.vnanet.vn/MediaUpload/Org/2023/07/11/vna-potal-chan-dung-dai-tuong-vo-nguyen-giap-184218511-16-3-52.jpg', 
+    born:'1911', 
+    died:'2013' 
+  },
+      { 
+    id:'trung', 
+    name:'Hai Bà Trưng', 
+    role:'Nữ vương', 
+    bio:'Hai chị em Trưng Trắc và Trưng Nhị, lãnh đạo cuộc khởi nghĩa lớn đầu tiên chống ách đô hộ của nhà Đông Hán, biểu tượng cho tinh thần bất khuất của phụ nữ Việt Nam.', 
+    image:'https://cand.com.vn/Files/Image/thanhbinh/2020/01/20/eab955b3-4d93-4419-adab-1551091a17b9.jpg', 
+    born:'Năm 14', 
+    died:'Năm 43' 
+  },
+  { 
+    id:'ngoq', 
+    name:'Ngô Quyền', 
+    role:'Vua (Tổ Trung Hưng)', 
+    bio:'Vị vua mở đầu thời kỳ độc lập tự chủ lâu dài của Việt Nam. Nổi tiếng với chiến thắng quân Nam Hán trên sông Bạch Đằng năm 938.', 
+    image:'https://vznew.com/wp-content/uploads/2022/04/ngo-quyen-que-o-dau.jpg', 
+    born:'898', 
+    died:'944' 
+  },
+  { 
+    id:'tranhungdao', 
+    name:'Trần Hưng Đạo', 
+    role:'Quốc công Tiết chế', 
+    bio:'Trần Quốc Tuấn, Hưng Đạo Đại Vương, là nhà chính trị, quân sự thiên tài. Ông là Tổng chỉ huy quân đội Đại Việt 3 lần đánh tan quân xâm lược Mông-Nguyên.', 
+    image:'https://images.spiderum.com/sp-images/968779a06a3311ecb1922f9ddf2fb974.jpeg', 
+    born:'1228?', 
+    died:'1300' 
+  },
+  { 
+    id:'quangtrung', 
+    name:'Nguyễn Huệ', 
+    role:'Hoàng đế', 
+    bio:'Nguyễn Huệ (Vua Quang Trung) là anh hùng áo vải, nhà quân sự lỗi lạc. Lãnh đạo phong trào Tây Sơn, đánh đổ chúa Trịnh, chúa Nguyễn, phá quân Xiêm, diệt quân Thanh, thống nhất đất nước.', 
+    image:'https://www.daophatngaynay.com/vn/files/images/2015/quy4/3136532_orig_655029116.jpg', 
+    born:'1753', 
+    died:'1792' 
+  }
+
+];
+
+      const GALLERY = PROFILES.map(p => p.image).slice(0, 4); // Lấy 4 ảnh đầu từ profiles
+
+      // DOM Elements
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeIconLight = themeToggleBtn?.querySelector('.theme-icon-light');
+      const themeIconDark = themeToggleBtn?.querySelector('.theme-icon-dark');
+  
+      const warContainer = document.getElementById('war-cards');
+      const timelineStrip = document.getElementById('timeline-strip');
+      const profileList = document.getElementById('profile-list');
+      const galleryEl = document.getElementById('gallery');
+      const searchInput = document.getElementById('global-search');
+      const clearBtn = document.getElementById('search-clear');
+      // === THAY ĐỔI: Sửa selector từ .chip thành .filters .tag ===
+      const chips = document.querySelectorAll('.filters .tag');
+      const bookmarkViewBtn = document.getElementById('show-bookmarks');
+      const bookmarkCountSpan = document.getElementById('bookmark-count');
+
+      const modal = document.getElementById('profile-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalBody = document.getElementById('modal-body');
+      const modalClose = document.getElementById('modal-close');
+      const modalBookmark = document.getElementById('modal-bookmark');
+      const modalShare = document.getElementById('modal-share');
+      const lightbox = document.getElementById('image-lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      // Bookmarks
+      const BOOKMARK_KEY = 'dcl_heroes_bookmarks_v1';
+      function getBookmarks(){ try{ return JSON.parse(localStorage.getItem(BOOKMARK_KEY)||'[]'); }catch(e){ return []; } }
+      function saveBookmarks(list){ localStorage.setItem(BOOKMARK_KEY, JSON.stringify(list)); }
+      function updateBookmarkCount() {
+          const count = getBookmarks().length;
+          if(bookmarkCountSpan) bookmarkCountSpan.textContent = count;
+      }
+
+      // Render Functions
+      function renderWars(filterText='', filterTag='all'){
+        warContainer.innerHTML = '';
+        const q = filterText.trim().toLowerCase();
+        const bookmarks = getBookmarks();
+        const list = WARS.filter(w=>{
+          if(filterTag !== 'all' && !w.tags.includes(filterTag)) return false;
+          if(!q) return true;
+          return (w.title + ' ' + (w.summary||'') + ' ' + (w.year||'')).toLowerCase().includes(q);
+        });
+        if(list.length === 0){
+          warContainer.innerHTML = '<p class="muted text-center col-span-full">Không tìm thấy mục nào phù hợp.</p>';
+          return;
+        }
+        list.forEach((w, index) => {
+          const isBookmarked = bookmarks.includes(w.id);
+          const el = document.createElement('div');
+          el.className = 'card-item';
+          el.setAttribute('data-keywords', `${w.title} ${w.summary} ${w.tags.join(' ')} ${w.year}`);
+          el.style = `--item-index: ${index}`; // For animation delay
+          el.innerHTML = `
+            <img src="${w.image}" alt="${w.title}" class="card-item-image">
+            <div>
+              <h4>${w.title}</h4>
+              <div class="meta">${w.year} • ${w.tags.includes('battle') ? 'Trận đánh' : (w.tags.includes('revolution') ? 'Cách mạng' : 'Kháng chiến')}</div>
+              <p class="muted">${w.summary}</p>
+              <div class="actions">
+                <button class="btn btn-view" data-id="${w.id}">Xem</button>
+                <button class="bookmark-btn btn-save" data-id="${w.id}" title="${isBookmarked ? 'Bỏ lưu' : 'Lưu'}" aria-pressed="${isBookmarked}">${isBookmarked ? '✓ Đã lưu' : '★ Lưu'}</button>
+              </div>
+            </div>`;
+          warContainer.appendChild(el);
+        });
+      }
+
+      function renderTimeline(){
+        timelineStrip.innerHTML = '';
+        // Chỉ lấy 8 mục đầu tiên cho timeline
+        WARS.slice(0, 8).forEach(w=>{
+          const c = document.createElement('button');
+          c.className = 'timeline-chip';
+          c.setAttribute('data-id', w.id);
+          c.innerHTML = `<span class="year">${w.year}</span><span class="title">${w.title}</span>`;
+          timelineStrip.appendChild(c);
+        });
+      }
+
+      function renderProfiles(filterText='', filterTag='all'){
+        profileList.innerHTML = '';
+        const q = filterText.trim().toLowerCase();
+        const bookmarks = getBookmarks();
+        // Lọc profile
+        const list = PROFILES.filter(p => {
+            if(filterTag !== 'all' && filterTag !== 'hero') return false; // Chỉ hiện nếu filter là 'all' hoặc 'hero'
+            if(!q) return true;
+            return (p.name + ' ' + (p.role||'') + ' ' + (p.bio||'')).toLowerCase().includes(q);
+        });
+        
+        if (list.length === 0) {
+            profileList.innerHTML = '<p class="muted text-center col-span-full">Không tìm thấy nhân vật nào.</p>';
+            return;
+        }
+        
+        list.forEach((p, index)=>{
+          const isBookmarked = bookmarks.includes(p.id);
+          const card = document.createElement('div');
+          card.className = 'profile';
+          card.setAttribute('data-keywords', `${p.name} ${p.role} ${p.bio}`);
+          card.style = `--item-index: ${index}`;
+          card.innerHTML = `
+              <img src="${p.image}" alt="${p.name}">
+              <div class="profile-content">
+                <h5>${p.name}</h5>
+                <div class="muted">${p.role}</div>
+                <div class="actions" style="justify-content: center; margin-top: 16px;">
+                    <button class="btn btn-view" data-id="${p.id}">Xem</button>
+                    <button class="icon-btn btn-save" data-id="${p.id}" title="${isBookmarked ? 'Bỏ lưu' : 'Lưu'}" aria-pressed="${isBookmarked}">${isBookmarked ? '✓' : '★'}</button>
+                </div>
+              </div>`;
+          profileList.appendChild(card);
+        });
+      }
+
+      function renderGallery(){
+        galleryEl.innerHTML = '';
+        GALLERY.forEach(src=>{
+          const button = document.createElement('button');
+          button.innerHTML = `<img src="${src}" alt="Ảnh tư liệu" loading="lazy">`;
+          button.addEventListener('click', ()=> openLightbox(src));
+          galleryEl.appendChild(button);
+        });
+      }
+
+      // Open profile modal
+      function openProfile(id){
+        const p = PROFILES.find(x => x.id === id) || WARS.find(x => x.id === id); // Mở rộng để xem cả WARS
+        if(!p) return;
+        modalTitle.textContent = p.title || p.name;
+        
+        const bms = getBookmarks();
+        const isBookmarked = bms.includes(p.id);
+        modalBookmark.innerHTML = isBookmarked ? '✓ Bỏ lưu' : '★ Lưu';
+        modalBookmark.setAttribute('data-id', p.id);
+        modalBookmark.setAttribute('aria-pressed', isBookmarked);
+
+        if(p.role) { // Đây là Profile
+             modalBody.innerHTML = `<div style="display:grid;grid-template-columns:1fr; gap:16px; align-items:start">
+              <img src="${p.image}" alt="${p.name}" style="width:100%; height: 250px; object-fit: cover; border-radius:8px; margin-bottom: 12px;">
+              <div>
+                <div class="meta" style="font-size: 1rem;"><strong>Vai trò:</strong> ${p.role}</div>
+                <div class.meta" style="font-size: 0.9rem;"><strong>Sinh — Mất:</strong> ${p.born || '?'} — ${p.died || '?'}</div>
+                <p style="margin-top:16px">${p.bio}</p>
+              </div>
+            </div>`;
+        } else { // Đây là War/Event
+            modalBody.innerHTML = `<div style="display:grid;grid-template-columns:1fr; gap:16px; align-items:start">
+              <img src="${p.image}" alt="${p.title}" style="width:100%; height: 250px; object-fit: cover; border-radius:8px; margin-bottom: 12px;">
+              <div>
+                <div class="meta" style="font-size: 1rem;"><strong>Thời gian:</strong> ${p.year}</div>
+                <p class="summary" style="font-weight: 600; font-size: 1.1rem; margin-top: 8px;">${p.summary}</p>
+                <p style="margin-top:16px">${p.content}</p>
+              </div>
+            </div>`;
+        }
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        modal.setAttribute('aria-hidden','false');
+        modalClose.focus();
+      }
+      function closeModal() { modal.style.display='none'; document.body.style.overflow = ''; modal.setAttribute('aria-hidden','true'); }
+      modalClose.addEventListener('click', closeModal);
+
+      // Lightbox
+      function openLightbox(src){ lightboxImg.src = src; lightbox.style.display = 'flex'; document.body.style.overflow = 'hidden'; lightboxClose.focus(); }
+      function closeLightbox() { lightbox.style.display = 'none'; if(modal.style.display !== 'flex') document.body.style.overflow = ''; }
+      lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+      lightboxClose.addEventListener('click', closeLightbox);
+
+      // init
+      renderWars();
+      renderTimeline();
+      renderProfiles();
+      renderGallery();
+      updateBookmarkCount();
+
+      // --- Event Listeners ---
+      function applyFilters(){
+        const q = searchInput.value;
+        const active = Array.from(chips).find(c=> c.classList.contains('active'));
+        const tag = active ? active.getAttribute('data-filter') : 'all';
+        renderWars(q, tag);
+        renderProfiles(q, tag);
+      }
+      searchInput.addEventListener('input', ()=> applyFilters());
+      clearBtn.addEventListener('click', ()=> { searchInput.value=''; applyFilters(); searchInput.focus(); });
+      
+      // === THAY ĐỔI: Thêm cuộn trang khi click tab (đã có) và Cập nhật tag active khi cuộn ===
+      chips.forEach(ch=>{
+        ch.addEventListener('click', (e)=> {
+          e.preventDefault();
+          chips.forEach(x=>x.classList.remove('active'));
+          ch.classList.add('active');
+          applyFilters();
+
+          // Thêm logic cuộn
+          const filter = ch.getAttribute('data-filter');
+          let targetId = '';
+          switch(filter) {
+              case 'war': targetId = '#wars-list'; break;
+              case 'hero': targetId = '#profiles'; break;
+              case 'event': targetId = '#timeline'; break;
+              case 'all': targetId = '#overview'; break;
+              default: targetId = '#overview';
+          }
+
+          if (targetId) {
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                  const headerHeight = document.querySelector('.sticky-header')?.offsetHeight || 76;
+                  const filterBarHeight = document.querySelector('.sticky-filters-bar')?.offsetHeight || 0;
+                  const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                  // Tính toán vị trí cuộn: Vị trí của mục tiêu - chiều cao của cả 2 thanh sticky - 20px đệm
+                  const offsetPosition = targetPosition - headerHeight - filterBarHeight - 20; 
+
+                  window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                  });
+              }
+          }
+        });
+      });
+      // === KẾT THÚC THAY ĐỔI CUỘN TAB ===
+
+      // === BỔ SUNG: Tự động đổi tag active khi cuộn (Intersection Observer) ===
+      function updateActiveTagOnScroll() {
+          const sections = [
+              { id: 'overview', filter: 'all' },
+              { id: 'wars-list', filter: 'war' },
+              { id: 'profiles', filter: 'hero' },
+              { id: 'timeline', filter: 'event' }
+          ];
+
+          const headerHeight = document.querySelector('.sticky-header')?.offsetHeight || 76;
+          const filterBarHeight = document.querySelector('.sticky-filters-bar')?.offsetHeight || 0;
+          const offset = headerHeight + filterBarHeight + 1; // 1px dưới thanh filter
+
+          // Dùng Intersection Observer để theo dõi
+          const observerOptions = {
+              root: null, // viewport
+              rootMargin: `-${offset}px 0px -50% 0px`, // Vùng quan sát nằm ngay dưới thanh sticky
+              threshold: 0 // Ngay khi vượt qua offset
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      const sectionId = entry.target.id;
+                      const activeSection = sections.find(s => s.id === sectionId);
+                      
+                      if (activeSection) {
+                          // Lọc và bỏ active tất cả
+                          chips.forEach(c => c.classList.remove('active'));
+
+                          // Thêm active cho tag tương ứng
+                          const targetTag = document.querySelector(`.filters .tag[data-filter="${activeSection.filter}"]`);
+                          if (targetTag) {
+                              targetTag.classList.add('active');
+                          }
+                      }
+                  }
+              });
+          }, observerOptions);
+
+          sections.forEach(s => {
+              const el = document.getElementById(s.id);
+              if (el) observer.observe(el);
+          });
+      }
+
+      // Khởi tạo observer sau khi các phần tử đã render
+      window.addEventListener('load', updateActiveTagOnScroll);
+      // === KẾT THÚC BỔ SUNG ===
+      
+      // Event Delegation for View, Save, Timeline
+      document.addEventListener('click', (e)=>{
+        const viewBtn = e.target.closest('.btn-view');
+        const saveBtn = e.target.closest('.btn-save, #modal-bookmark');
+        const timelineChip = e.target.closest('.timeline-chip');
+
+        if(viewBtn) { e.preventDefault(); openProfile(viewBtn.dataset.id); }
+        if(timelineChip) { e.preventDefault(); openProfile(timelineChip.dataset.id); }
+        
+        if(saveBtn) {
+          e.preventDefault();
+          const id = saveBtn.dataset.id;
+          let list = getBookmarks();
+          const isBookmarked = list.includes(id);
+          
+          if(isBookmarked){ list = list.filter(x=>x!==id); }
+          else { list.push(id); }
+          saveBookmarks(list);
+          updateBookmarkCount();
+          
+          // Update all buttons for this ID
+          document.querySelectorAll(`.btn-save[data-id="${id}"], #modal-bookmark[data-id="${id}"]`).forEach(btn => {
+              btn.innerHTML = list.includes(id) ? '✓ Đã lưu' : '★ Lưu';
+              btn.setAttribute('aria-pressed', list.includes(id));
+              btn.setAttribute('title', list.includes(id) ? 'Bỏ lưu' : 'Lưu');
+          });
+        }
+      });
+
+      // Show bookmarks view
+      bookmarkViewBtn.addEventListener('click', ()=>{
+        const list = getBookmarks();
+        if(list.length === 0){ alert('Chưa lưu mục nào.'); return; }
+        const items = [];
+        list.forEach(id=>{
+          const w = WARS.find(x=>x.id===id); if(w) items.push(w.title + ' (' + w.year + ')');
+          const p = PROFILES.find(x=>x.id===id); if(p) items.push(p.name + ' — ' + p.role);
+        });
+        openProfile(list[0]); // Mở mục đầu tiên đã lưu
+        alert('Mục đã lưu (' + items.length + '):\n' + items.join('\n') + '\n\nĐang mở mục đầu tiên: ' + items[0]);
+      });
+
+      // Theme toggle
+      function applyTheme(theme) {
+          htmlEl.setAttribute('data-theme', theme);
+          localStorage.setItem('dcl_theme_v6', theme);
+          if (themeIconLight && themeIconDark) {
+               themeIconLight.classList.toggle('hidden', theme === 'dark');
+               themeIconDark.classList.toggle('hidden', theme === 'light');
+          }
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const stored = localStorage.getItem('dcl_theme_v6') || (prefersDark ? 'dark' : 'light');
+      applyTheme(stored);
+      themeToggleBtn.addEventListener('click', ()=>{
+        const cur = htmlEl.getAttribute('data-theme') === 'dark' ? 'light':'dark';
+        applyTheme(cur);
+      });
+
+      // Keyboard: close modal/lightbox with Esc
+      document.addEventListener('keydown', (e)=> {
+          if(e.key === 'Escape'){
+              if (modal.style.display === 'flex') closeModal();
+              if (lightbox.style.display === 'flex') closeLightbox();
+              if (mobileNavOverlay.style.display === 'flex') closeMobileNav();
+          }
+      });
+
+     
+
+    })();
+  </script>
+  <footer>
+      <div class="footer-content">
+          <div class="footer-column">
+              <h4>Giới thiệu</h4>
+              <p>Trang web "Dòng Chảy Lịch Sử" cung cấp thông tin tóm tắt về lịch sử Việt Nam qua các thời kỳ, phục vụ mục đích tham khảo và học tập.</p>
+          </div>
+          <div class="footer-column">
+              <h4>Liên hệ</h4>
+              <a href="mailto:info@lichsuviet.vn">Email: info@lichsuviet.vn</a>
+              <a href="tel:+84123456789">Điện thoại: (012) 345-6789</a>
+              <p>Địa chỉ: 123 Đường ABC, Hà Nội</p>
+          </div>
+          <div class="footer-column">
+              <h4>Hỗ trợ</h4>
+              <a href="faq.html">Câu hỏi thường gặp</a>
+              <a href="lienhe.html">Góp ý nội dung</a>
+              <a href="policy.html">Chính sách bảo mật</a>
+          </div>
+      </div>
+ <div class="wrap"> <div class="footer-copyright">
+                 <p class="muted" style="color: red; font-weight: bold; font-size: 20px; text-align: center;">
+  🇻🇳 Hoàng Sa, Trường Sa là của Việt Nam 🇻🇳
+</p>
+
+                        <p class="muted">© Dòng Chảy Lịch Sử Việt . Made by Bùi Lê Hậu . Thông tin tổng hợp cho mục đích tham khảo.</p>
+                        
+                    </div>
+                </div>
+  </footer>
+</body>
+</html>
